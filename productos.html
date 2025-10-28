@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Jess99</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="productos.html">Productos</a> 
+                    <a href="index.html#personalizacion">Personalización</a>
+                    <a href="empresas.html">Empresas</a> 
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+
+                <!-- User Type & CTA -->
+                <div class="header-actions">
+                    <div class="user-type-toggle" id="userTypeToggleDesktop">
+                        <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                        <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+                    </div>
+                    <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ctaHeaderBtn">Empieza ahora</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav>
+            <a href="index.html#inicio" class="mobile-menu-item">Inicio</a>
+            <a href="productos.html" class="mobile-menu-item">Productos</a>
+            <a href="index.html#personalizacion" class="mobile-menu-item">Personalización</a>
+            <a href="empresas.html" class="mobile-menu-item">Empresas</a>
+            <a href="contacto.html" class="mobile-menu-item">Contacto</a>
+        </nav>
+        <div class="mobile-menu-actions">
+            <div class="user-type-toggle mobile" id="userTypeToggleMobile">
+                <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+            </div>
+            <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile" id="ctaMobileBtn">Empieza ahora</a>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- All Products Section -->
+        <section class="products" id="productos">
+            <div class="container">
+                <!-- Header -->
+                <div class="section-header">
+                    <h2>Nuestro Catálogo de <span class="text-primary">Productos</span></h2>
+                    <p>Explora todas las opciones que tenemos para que des rienda suelta a tu creatividad.</p>
+                </div>
+
+                <!-- Product Filters -->
+                <div class="product-filters" id="productFilters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="camisetas">Camisetas</button>
+                    <button class="filter-btn" data-filter="hoodies">Hoodies</button>
+                    <button class="filter-btn" data-filter="mugs">Mugs</button>
+                    <button class="filter-btn" data-filter="oficina">Oficina</button>
+                </div>
+
+                <!-- Category: Ropa -->
+                <div class="product-category" data-category="ropa">
+                    <h3 class="category-title">Ropa y accesorios</h3>
+                    <div class="products-grid catalog-grid">
+                        <!-- Product: Camisetas -->
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <span class="product-badge">⭐ Popular</span>
+                                <img src="IMG/Camisetas/Camisetas general.png" alt="Camisetas">
+                            </div>
+                            <div class="product-content">
+                                <h3>Camisetas</h3>
+                                <p>100% algodón, perfectas para cualquier diseño.</p>
+                                <div class="product-footer"><span class="product-price">Desde $30.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Camisetas/Camisetas tipo polo.png" alt="Camisetas tipo polo">
+                            </div>
+                            <div class="product-content">
+                                <h3>Camisetas tipo polo</h3>
+                                <p>Suavidad y comodad en una sola prenda.</p>
+                                <div class="product-footer"><span class="product-price">Desde $35.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Product: Hoodies -->
+                        <div class="product-card" data-product-type="hoodies">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Hoodies/Hoodies.jpeg" alt="hoodies">
+                            </div>
+                            <div class="product-content">
+                                <h3>Hoodies</h3>
+                                <p>Suaves, cómodos y con capucha. Ideal para clima frío.</p>
+                                <div class="product-footer"><span class="product-price">Desde $60.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="hoodies">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Hoodies/Hoodies 2.png" alt="hoodies">
+                            </div>
+                            <div class="product-content">
+                                <h3>Hoodies</h3>
+                                <p>Suaves, cómodos y con capucha. Ideal para clima frío.</p>
+                                <div class="product-footer"><span class="product-price">Desde $60.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <!--CAMISETAS CUELLO REDONDO - CAMISETAS DAMA Y CABALLERO - CAMISETAS TIPO V-->
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Camisetas/Camisetas cuello redondo.png" alt="Camisetas tipo polo">
+                            </div>
+                            <div class="product-content">
+                                <h3>Camisetas cuello redondo</h3>
+                                <p>Suavidad y comodad en una sola prenda.</p>
+                                <div class="product-footer"><span class="product-price">Desde $35.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Camisetas/Camisetas dama y cabellero.png" alt="Camisetas para dama y cabellero">
+                            </div>
+                            <div class="product-content">
+                                <h3>Camisetas dama y caballero</h3>
+                                <p>Suavidad y comodad en una sola prenda.</p>
+                                <div class="product-footer"><span class="product-price">Desde $30.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Camisetas/Camisetas tipo v.png" alt="Camisetas tipo v">
+                            </div>
+                            <div class="product-content">
+                                <h3>Camisetas tipo v</h3>
+                                <p>Suavidad y comodad en una sola prenda.</p>
+                                <div class="product-footer"><span class="product-price">Desde $30.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Product: Gorras -->
+                        <div class="product-card" data-product-type="gorras">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Gorras.png" alt="Gorras">
+                            </div>
+                            <div class="product-content">
+                                <h3>Gorras</h3>
+                                <p>Estilo urbano con tu logo o diseño bordado/estampado.</p>
+                                <div class="product-footer"><span class="product-price">Desde $12.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <!-- Category: Hogar y Oficina -->
+                <div class="product-category" data-category="hogar">
+                    <h3 class="category-title">Hogar y Oficina</h3>
+                    <div class="products-grid catalog-grid">
+                        <!-- Product: Mugs -->
+                        <div class="product-card" data-product-type="mugs">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Mugs - copia.jpeg" alt="Mugs">
+                            </div>
+                            <div class="product-content">
+                                <h3>Mugs</h3>
+                                <p>Tazas de cerámica para tu café o té con un diseño único.</p>
+                                <div class="product-footer"><span class="product-price">Desde $12.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="mugs">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Mug ceramica.png" alt="Mugs">
+                            </div>
+                            <div class="product-content">
+                                <h3>Mugs espejo en ceramica</h3>
+                                <p>Tazas de cerámica para tu café o té con un diseño único.</p>
+                                <div class="product-footer"><span class="product-price">Desde $25.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Product: Termos -->
+                        <div class="product-card" data-product-type="mugs">
+                            <div class="product-image-wrapper">
+                                <span class="product-badge">⭐ Popular</span>
+                                <img src="IMG/Mugs/Termos.png" alt="Termos">
+                            </div>
+                            <div class="product-content">
+                                <h3>Termos</h3>
+                                <p>Mantén tu bebida a la temperatura perfecta con estilo.</p>
+                                <div class="product-footer"><span class="product-price">Desde $20.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="mugs">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Vaso viajero.png" alt="Termos">
+                            </div>
+                            <div class="product-content">
+                                <h3>Vaso viajeros</h3>
+                                <p>Mantén tu bebida a la temperatura perfecta con estilo.</p>
+                                <div class="product-footer"><span class="product-price">Desde $20.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Product: Mousepads -->
+                        <div class="product-card" data-product-type="oficina">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Pad Mouse.jpeg" alt="Mousepads">
+                            </div>
+                            <div class="product-content">
+                                <h3>Mousepad</h3>
+                                <p>Personaliza tu espacio de trabajo o gaming.</p>
+                                <div class="product-footer"><span class="product-price">Desde $15.000</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Product: Phone Cases -->
+                        <div class="product-card" data-product-type="oficina">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Esferos.png" alt="Esferos">
+                            </div>
+                            <div class="product-content">
+                                <h3>Esferos</h3>
+                                <p>Esferos 100% personalizados </p>
+                                <div class="product-footer"><span class="product-price">Desde $18</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="oficina">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Porta vasos.jpeg" alt="Porta vasos">
+                            </div>
+                            <div class="product-content">
+                                <h3>Porta Vasos</h3>
+                                <p>Esferos 100% personalizados </p>
+                                <div class="product-footer"><span class="product-price">Desde $18</span></div>
+                                <button class="btn btn-primary btn-sm">Personalizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand -->
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                        </div>
+                        <p class="footer-description">Creamos productos personalizados de alta calidad para individuos y empresas. Tu estilo, nuestra pasión.</p>
+                    </div>
+
+                    <!-- Products Links -->
+                    <div class="footer-links">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="productos.html">Camisetas</a></li>
+                            <li><a href="productos.html">Hoodies</a></li>
+                            <li><a href="productos.html">Gorras</a></li>
+                            <li><a href="productos.html">Mugs</a></li>
+                            <li><a href="productos.html">Ver todo</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Links -->
+                    <div class="footer-links">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="index.html#empresas">Soluciones Empresariales</a></li> 
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support Links -->
+                    <div class="footer-links">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="https://wa.me/573197128435?text=Hola%20vengo%20del%20centro%20de%20ayuda,%20tengo%20este%20inconveniente" target="_blank" rel="noopener noreferrer">Centro de ayuda</a></li>
+                            <li><a href="envios.html">Envíos</a></li>
+                            <li><a href="terminos.html">Términos</a></li>
+                            <li><a href="privacidad.html">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2025 Jess99. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

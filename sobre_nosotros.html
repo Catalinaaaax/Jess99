@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - Jess99</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="productos.html">Productos</a> 
+                    <a href="index.html#personalizacion">Personalización</a>
+                    <a href="empresas.html">Empresas</a> 
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+
+                <!-- User Type & CTA -->
+                <div class="header-actions">
+                    <div class="user-type-toggle" id="userTypeToggleDesktop">
+                        <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                        <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+                    </div>
+                    <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ctaHeaderBtn">Empieza ahora</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav>
+            <a href="index.html#inicio" class="mobile-menu-item">Inicio</a>
+            <a href="productos.html" class="mobile-menu-item">Productos</a>
+            <a href="index.html#personalizacion" class="mobile-menu-item">Personalización</a>
+            <a href="empresas.html" class="mobile-menu-item">Empresas</a>
+            <a href="contacto.html" class="mobile-menu-item">Contacto</a>
+        </nav>
+        <div class="mobile-menu-actions">
+            <div class="user-type-toggle mobile" id="userTypeToggleMobile">
+                <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+            </div>
+            <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile" id="ctaMobileBtn">Empieza ahora</a>
+        </div>
+    </div>
+    <main>
+        <!-- About Us Hero -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Nuestra <span class="text-primary">Historia</span></h1>
+                    <p>Jess99 nació con una idea sencilla: que cada persona y empresa pueda expresar su estilo a través de productos personalizados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <div class="container">
+                <div class="history-grid">
+                    <div class="history-image">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800" alt="Equipo de Jess99 trabajando">
+                    </div>
+                    <div class="history-content">
+                        <h3>De un sueño a una realidad</h3>
+                        <p>Empezamos ofreciendo camisetas personalizadas para amigos y familias, y poco a poco crecimos hasta trabajar también con empresas que buscan dar identidad a su marca.</p>
+                        <p>Hoy, en Jess99 seguimos creyendo que cada diseño cuenta una historia, y nos enorgullece ser parte de la tuya.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mission-vision-grid">
+                    <div class="mission-card">
+                        <h3>Misión</h3>
+                        <p>Ofrecer productos personalizados de alta calidad que reflejen la esencia de cada cliente, combinando creatividad, tecnología y un servicio ágil y cercano.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h3>Visión</h3>
+                        <p>Ser la marca líder en personalización textil y de regalos en el mercado hispano, reconocida por la innovación, la atención al detalle y la satisfacción de nuestros clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Nuestros <span class="text-primary">Valores</span></h2>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🎨</div>
+                        <h4>Creatividad</h4>
+                        <p>Damos vida a tus ideas, sin importar cuán audaces sean.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🤝</div>
+                        <h4>Compromiso</h4>
+                        <p>Cumplimos lo que prometemos, en tiempo y calidad.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">💙</div>
+                        <h4>Calidad</h4>
+                        <p>Cada producto cuenta con los mejores materiales y acabados.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🌱</div>
+                        <h4>Responsabilidad</h4>
+                        <p>Apostamos por procesos sostenibles y responsables.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🚀</div>
+                        <h4>Innovación</h4>
+                        <p>Integramos nuevas tecnologías de impresión y diseño.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container text-center">
+                <h3>Un equipo que cree en los detalles</h3>
+                <p class="team-text">Detrás de Jess99 hay un equipo apasionado por el diseño, la moda y la personalización. Creemos que cada detalle importa y trabajamos día a día para que tu experiencia sea única.</p>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container text-center">
+                <h2>Crea con nosotros algo verdaderamente <span class="text-primary">tuyo</span></h2>
+                <p>Conoce más sobre nuestros productos y empieza a diseñar.</p>
+                <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" role="button">
+                    Personaliza ahora
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand -->
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                        </div>
+                        <p class="footer-description">Creamos productos personalizados de alta calidad para individuos y empresas. Tu estilo, nuestra pasión.</p>
+                    </div>
+
+                    <!-- Links -->
+                    <div class="footer-links">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="productos.html">Ver todo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="index.html#empresas">Soluciones Empresariales</a></li>
+                            <li><a href="blog.html">Blog</a></li>                            
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="https://wa.me/573197128435?text=Hola%20vengo%20del%20centro%20de%20ayuda,%20tengo%20este%20inconveniente" target="_blank" rel="noopener noreferrer">Centro de ayuda</a></li>
+                            <li><a href="envios.html">Envíos</a></li>                            
+                            <li><a href="terminos.html">Términos</a></li>
+                            <li><a href="privacidad.html">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2025 Jess99. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

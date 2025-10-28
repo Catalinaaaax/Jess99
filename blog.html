@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Jess99</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="productos.html">Productos</a> 
+                    <a href="index.html#personalizacion">Personalización</a>
+                    <a href="empresas.html">Empresas</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+
+                <!-- User Type & CTA -->
+                <div class="header-actions">
+                    <div class="user-type-toggle" id="userTypeToggleDesktop">
+                        <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                        <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+                    </div>
+                    <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ctaHeaderBtn">Empieza ahora</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav>
+            <a href="index.html#inicio" class="mobile-menu-item">Inicio</a>
+            <a href="productos.html" class="mobile-menu-item">Productos</a>
+            <a href="index.html#personalizacion" class="mobile-menu-item">Personalización</a>
+            <a href="empresas.html" class="mobile-menu-item">Empresas</a>
+            <a href="contacto.html" class="mobile-menu-item">Contacto</a>
+        </nav>
+        <div class="mobile-menu-actions">
+            <div class="user-type-toggle mobile" id="userTypeToggleMobile">
+                <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+            </div>
+            <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile" id="ctaMobileBtn">Empieza ahora</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Blog Hero Section -->
+        <section class="blog-hero">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Nuestro <span class="text-primary">Blog</span></h1>
+                    <p>Ideas, tutoriales y novedades del mundo de la personalización. ¡Inspírate con nosotros!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Content Section -->
+        <section class="blog-section">
+            <div class="container">
+                <div class="blog-layout">
+                    <!-- Blog Posts -->
+                    <div class="blog-posts">
+                        <!-- Blog Post Card 1 -->
+                        <div class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://images.unsplash.com/photo-1551808525-51a94da548ce?w=800" alt="Técnicas de estampado">
+                            </div>
+                            <div class="blog-post-content">
+                                <span class="blog-post-category">Técnicas</span>
+                                <h3>DTF vs. Vinilo Textil: ¿Cuál es mejor para tu diseño?</h3>
+                                <p>Analizamos las dos técnicas de estampado más populares para que elijas la ideal para tus camisetas personalizadas.</p>
+                                <a href="#" class="btn btn-outline btn-sm">Leer más →</a>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://images.unsplash.com/photo-1611937929422-a0d458316394?w=800" alt="Regalos corporativos">
+                            </div>
+                            <div class="blog-post-content">
+                                <span class="blog-post-category">Empresas</span>
+                                <h3>5 ideas de regalos corporativos que tus empleados amarán</h3>
+                                <p>Sorprende a tu equipo con regalos personalizados que fortalecen la cultura de tu empresa y dejan una marca positiva.</p>
+                                <a href="#" class="btn btn-outline btn-sm">Leer más →</a>
+                            </div>
+                        </div>
+                        
+                        <div class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://images.unsplash.com/photo-1585232293989-5538de2b480c?w=800" alt="Cuidado de prendas">
+                            </div>
+                            <div class="blog-post-content">
+                                <span class="blog-post-category">Consejos</span>
+                                <h3>Cómo cuidar tus prendas personalizadas para que duren más</h3>
+                                <p>Sigue estos sencillos consejos de lavado y secado para mantener los colores y el estampado de tus productos como nuevos.</p>
+                                <a href="#" class="btn btn-outline btn-sm">Leer más →</a>
+                            </div>
+                        </div>
+                        
+                        
+                         <div class="blog-post-card">
+                            <div class="blog-post-image">
+                                <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800" alt="Tendencias de diseño">
+                            </div>
+                            <div class="blog-post-content">
+                                <span class="blog-post-category">Inspiración</span>
+                                <h3>Tendencias de diseño para camisetas en 2025</h3>
+                                <p>Explora los estilos, colores y tipografías que estarán de moda este año para que tus diseños sean los más originales.</p>
+                                <a href="#" class="btn btn-outline btn-sm">Leer más →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <aside class="blog-sidebar">
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget">
+                            <h4 class="widget-title">Categorías</h4>
+                            <ul class="widget-list">
+                                <li><a href="#">Técnicas de Estampado</a></li>
+                                <li><a href="#">Ideas para Empresas</a></li>
+                                <li><a href="#">Consejos de Cuidado</a></li>
+                                <li><a href="#">Inspiración y Diseño</a></li>
+                                <li><a href="#">Novedades</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Recent Posts Widget -->
+                        <div class="sidebar-widget">
+                            <h4 class="widget-title">Recientes</h4>
+                            <ul class="widget-list recent-posts">
+                                <li><a href="#">DTF vs. Vinilo Textil</a></li>
+                                <li><a href="#">5 ideas de regalos corporativos</a></li>
+                                <li><a href="#">Cómo cuidar tus prendas</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- CTA Widget -->
+                        <div class="sidebar-widget cta-widget">
+                            <h4>¿Listo para crear?</h4>
+                            <p>Personaliza tu producto ahora con la mejor calidad.</p>
+                            <a href="productos.html" class="btn btn-primary">Ver Productos</a>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                        </div>
+                        <p class="footer-description">Creamos productos personalizados de alta calidad para individuos y empresas. Tu estilo, nuestra pasión.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="productos.html">Ver todo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="https://wa.me/573197128435?text=Hola%20vengo%20del%20centro%20de%20ayuda,%20tengo%20este%20inconveniente" target="_blank" rel="noopener noreferrer">Centro de ayuda</a></li>
+                            <li><a href="envios.html">Envíos</a></li>
+                            <li><a href="terminos.html">Términos</a></li>
+                            <li><a href="privacidad.html">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2025 Jess99. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

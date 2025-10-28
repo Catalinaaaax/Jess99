@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Empresas - Jess99</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                    </a>
+                </div>
+                <nav class="nav-desktop">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="personalizacion.html">Personalización</a> 
+                    <a href="empresas.html" class="active">Empresas</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="user-type-toggle" id="userTypeToggleDesktop">
+                        <button class="user-type-btn" data-user-type="persona">Persona</button>
+                        <button class="user-type-btn active" data-user-type="empresa">Empresa</button>
+                    </div>
+                    <a href="https://wa.me/573197128435?text=Hola%20Jess99,%20me%20gustaría%20solicitar%20una%20cotización%20empresarial." target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ctaHeaderBtn">Cotiza ahora</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav>
+            <a href="index.html#inicio" class="mobile-menu-item">Inicio</a>
+            <a href="productos.html" class="mobile-menu-item">Productos</a>
+            <a href="personalizacion.html" class="mobile-menu-item">Personalización</a>
+            <a href="empresas.html" class="mobile-menu-item active">Empresas</a>
+            <a href="contacto.html" class="mobile-menu-item">Contacto</a>
+        </nav>
+        <div class="mobile-menu-actions">
+            <div class="user-type-toggle mobile" id="userTypeToggleMobile">
+                <button class="user-type-btn" data-user-type="persona">Persona</button>
+                <button class="user-type-btn active" data-user-type="empresa">Empresa</button>
+            </div>
+            <a href="https://wa.me/573197128435?text=Hola%20Jess99,%20me%20gustaría%20solicitar%20una%20cotización%20empresarial." target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile" id="ctaMobileBtn">Cotiza ahora</a>
+        </div>
+    </div>
+
+
+    <main>
+        <!-- All Products Section -->
+        <section class="products" id="productos">
+            <div class="container">
+                <!-- Header -->
+                <div class="section-header">
+                    <h2>Catálogo para <span class="text-primary">Empresas</span></h2>
+                    <p>Productos ideales para uniformes, merchandising y regalos corporativos. Precios especiales por volumen.</p>
+                </div>
+
+                <!-- Product Filters -->
+                <div class="product-filters" id="productFilters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="camisetas">Camisetas</button>
+                    <button class="filter-btn" data-filter="hoodies">Hoodies</button>
+                    <button class="filter-btn" data-filter="mugs">Mugs</button>
+                    <button class="filter-btn" data-filter="oficina">Oficina</button>
+                </div>
+
+                <!-- Category: Ropa -->
+                <div class="product-category" data-category="ropa">
+                    <h3 class="category-title">Uniformes y Ropa Corporativa</h3>
+                    <div class="products-grid catalog-grid">
+                        <!-- Product: Camisetas -->
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <span class="product-badge">⭐ Popular</span>
+                                <img src="IMG/Camisetas/Camisetas general.png" alt="Camisetas">
+                            </div>
+                            <div class="product-content">
+                                <h3>Camisetas</h3>
+                                <p>100% algodón, perfectas para estampar tu logo.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20camisetas%20para%20mi%20empresa." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Camisetas/Camisetas tipo polo.png" alt="Camisetas tipo polo">
+                            </div>
+                            <div class="product-content">
+                                <h3>Camisetas tipo polo</h3>
+                                <p>Elegancia y comodidad para tu equipo.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20camisetas%20tipo%20polo%20para%20mi%20empresa." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <!-- Product: Hoodies -->
+                        <div class="product-card" data-product-type="hoodies">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Hoodies/Hoodies.jpeg" alt="hoodies">
+                            </div>
+                            <div class="product-content">
+                                <h3>Hoodies Corporativos</h3>
+                                <p>Buzos con capucha, ideales para dotación o eventos.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20hoodies%20para%20mi%20empresa." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="hoodies">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Hoodies/Hoodies 2.png" alt="hoodies">
+                            </div>
+                            <div class="product-content">
+                                <h3>Hoodies sin cremallera</h3>
+                                <p>Disponibles en múltiples colores para tu marca.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20hoodies%20para%20mi%20empresa." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <!--CAMISETAS CUELLO REDONDO - CAMISETAS DAMA Y CABALLERO - CAMISETAS TIPO V-->
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Camisetas/Camisetas cuello redondo.png" alt="Camisetas cuello redondo">
+                            </div>
+                            <div class="product-content">
+                                <h3>Camisetas Cuello Redondo</h3>
+                                <p>El clásico para uniformes y eventos. Alta calidad.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20camisetas%20cuello%20redondo." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Camisetas/Camisetas dama y cabellero.png" alt="Camisetas para dama y cabellero">
+                            </div>
+                            <div class="product-content">
+                                <h3>Uniformes Completos</h3>
+                                <p>Soluciones integrales de dotación para tu personal.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20uniformes%20para%20mi%20empresa." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="camisetas">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Camisetas/Camisetas tipo v.png" alt="Camisetas tipo v">
+                            </div>
+                            <div class="product-content">
+                                <h3>Camisetas Cuello V</h3>
+                                <p>Un toque moderno para la imagen de tu empresa.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20camisetas%20cuello%20V." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <!-- Product: Gorras -->
+                        <div class="product-card" data-product-type="gorras">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Gorras.png" alt="Gorras">
+                            </div>
+                            <div class="product-content">
+                                <h3>Gorras Corporativas</h3>
+                                <p>Con tu logo bordado o estampado. Ideal para eventos.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20gorras%20para%20mi%20empresa." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+
+                <!-- Category: Hogar y Oficina -->
+                <div class="product-category" data-category="hogar">
+                    <h3 class="category-title">Regalos y Oficina</h3>
+                    <div class="products-grid catalog-grid">
+                        <!-- Product: Mugs -->
+                        <div class="product-card" data-product-type="mugs">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Mugs - copia.jpeg" alt="Mugs">
+                            </div>
+                            <div class="product-content">
+                                <h3>Mugs Corporativos</h3>
+                                <p>El regalo perfecto para clientes y empleados.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20mugs%20para%20mi%20empresa." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="mugs">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Mug ceramica.png" alt="Mugs">
+                            </div>
+                            <div class="product-content">
+                                <h3>Mugs de Cerámica</h3>
+                                <p>Calidad premium para una imagen profesional.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20mugs%20de%20cerámica." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <!-- Product: Termos -->
+                        <div class="product-card" data-product-type="mugs">
+                            <div class="product-image-wrapper">
+                                <span class="product-badge">⭐ Popular</span>
+                                <img src="IMG/Mugs/Termos.png" alt="Termos">
+                            </div>
+                            <div class="product-content">
+                                <h3>Termos Personalizados</h3>
+                                <p>Un regalo útil y duradero con tu marca.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20termos%20para%20mi%20empresa." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="mugs">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Vaso viajero.png" alt="Termos">
+                            </div>
+                            <div class="product-content">
+                                <h3>Vasos Viajeros</h3>
+                                <p>Perfectos para el día a día de tu equipo.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20vasos%20viajeros." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <!-- Product: Mousepads -->
+                        <div class="product-card" data-product-type="oficina">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Pad Mouse.jpeg" alt="Mousepads">
+                            </div>
+                            <div class="product-content">
+                                <h3>Mousepads</h3>
+                                <p>Personaliza cada puesto de trabajo con tu marca.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20mousepads." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <!-- Product: Phone Cases -->
+                        <div class="product-card" data-product-type="oficina">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Esferos.png" alt="Esferos">
+                            </div>
+                            <div class="product-content">
+                                <h3>Esferos Corporativos</h3>
+                                <p>Merchandising económico y de alto impacto.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20esferos." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-type="oficina">
+                            <div class="product-image-wrapper">
+                                <img src="IMG/Mugs/Porta vasos.jpeg" alt="Porta vasos">
+                            </div>
+                            <div class="product-content">
+                                <h3>Portavasos</h3>
+                                <p>Un detalle elegante para oficinas y salas de juntas.</p>
+                                <div class="product-footer"><span class="product-price">Precios por volumen</span></div>
+                                <a href="https://wa.me/573197128435?text=Hola,%20quisiera%20cotizar%20portavasos." target="_blank" class="btn btn-primary btn-sm">Cotizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand -->
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                        </div>
+                        <p class="footer-description">Creamos productos personalizados de alta calidad para individuos y empresas. Tu estilo, nuestra pasión.</p>
+                    </div>
+
+                    <!-- Products Links -->
+                    <div class="footer-links">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="productos.html">Catálogo Personas</a></li>
+                            <li><a href="empresas_catalogo.html">Catálogo Empresas</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Links -->
+                    <div class="footer-links">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support Links -->
+                    <div class="footer-links">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="https://wa.me/573197128435?text=Hola%20vengo%20del%20centro%20de%20ayuda,%20tengo%20este%20inconveniente" target="_blank" rel="noopener noreferrer">Centro de ayuda</a></li>
+                            <li><a href="envios.html">Envíos</a></li>
+                            <li><a href="terminos.html">Términos</a></li>
+                            <li><a href="privacidad.html">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2025 Jess99. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

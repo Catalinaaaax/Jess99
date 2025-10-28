@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Jess99</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="productos.html">Productos</a> 
+                    <a href="index.html#personalizacion">Personalización</a>
+                    <a href="empresas.html">Empresas</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+
+                <!-- User Type & CTA -->
+                <div class="header-actions">
+                    <div class="user-type-toggle" id="userTypeToggleDesktop">
+                        <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                        <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+                    </div>
+                    <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ctaHeaderBtn">Empieza ahora</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav>
+            <a href="index.html#inicio" class="mobile-menu-item">Inicio</a>
+            <a href="productos.html" class="mobile-menu-item">Productos</a>
+            <a href="index.html#personalizacion" class="mobile-menu-item">Personalización</a>
+            <a href="empresas.html" class="mobile-menu-item">Empresas</a>
+            <a href="contacto.html" class="mobile-menu-item">Contacto</a>
+        </nav>
+        <div class="mobile-menu-actions">
+            <div class="user-type-toggle mobile" id="userTypeToggleMobile">
+                <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+            </div>
+            <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile" id="ctaMobileBtn">Empieza ahora</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Ponte en <span class="text-primary">Contacto</span></h1>
+                    <p>Estamos aquí para ayudarte. Elige la forma que prefieras para comunicarte con nosotros.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Methods Section -->
+        <section class="contact-methods">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- WhatsApp -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>Envíanos un mensaje para consultas rápidas o pedidos.</p>
+                        <a href="https://wa.me/573197128435?text=Hola%20Jess99,%20me%20gustaría%20saber%20más%20sobre%20sus%20productos." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                            Chatear por WhatsApp
+                        </a>
+                        <p class="contact-detail">+57 319 7128435</p>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>Descubre nuestros últimos diseños y promociones.</p>
+                        <a href="https://www.instagram.com/jess99_personalizados/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                            Síguenos en Instagram
+                        </a>
+                        <p class="contact-detail">@jess99_personalizados</p>
+                    </div>
+
+                    <!-- Facebook -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </div>
+                        <h3>Facebook</h3>
+                        <p>Mantente al día con nuestras novedades y comunidad.</p>
+                        <a href="https://www.facebook.com/jess99personalizados" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                            Visita nuestro Facebook
+                        </a>
+                        <p class="contact-detail">Jess99 Personalizados</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Correo Electrónico</h3>
+                        <p>Para consultas detalladas o soporte, escríbenos.</p>
+                        <a href="mailto:contactojess99@gmail.com" class="btn btn-primary btn-sm">
+                            Enviar un Correo
+                        </a>
+                        <p class="contact-detail">contactojess99@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location/Map Section -->
+        <section class="location-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Somos una tienda <span class="text-primary">100% Virtual</span></h2>
+                    <p>No contamos con una tienda física, pero realizamos envíos a toda Colombia. ¡Tu pedido llegará directamente a tu puerta!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Copied from sobre_nosotros.html) -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                        </div>
+                        <p class="footer-description">Creamos productos personalizados de alta calidad para individuos y empresas. Tu estilo, nuestra pasión.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="productos.html">Ver todo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="index.html#empresas">Soluciones Empresariales</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="https://wa.me/573197128435?text=Hola%20vengo%20del%20centro%20de%20ayuda,%20tengo%20este%20inconveniente" target="_blank" rel="noopener noreferrer">Centro de ayuda</a></li>
+                            <li><a href="envios.html">Envíos</a></li>
+                            <li><a href="terminos.html">Términos</a></li>
+                            <li><a href="privacidad.html">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2025 Jess99. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

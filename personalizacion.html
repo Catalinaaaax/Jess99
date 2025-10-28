@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Personalización - Jess99</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                    </a>
+                </div>
+                <nav class="nav-desktop">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="personalizacion.html" class="active">Personalización</a>
+                    <a href="empresas.html">Empresas</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="user-type-toggle" id="userTypeToggleDesktop">
+                        <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                        <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+                    </div>
+                    <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ctaHeaderBtn">Empieza ahora</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav>
+            <a href="index.html#inicio" class="mobile-menu-item">Inicio</a>
+            <a href="productos.html" class="mobile-menu-item">Productos</a>
+            <a href="personalizacion.html" class="mobile-menu-item active">Personalización</a>
+            <a href="empresas.html" class="mobile-menu-item">Empresas</a>
+            <a href="contacto.html" class="mobile-menu-item">Contacto</a>
+        </nav>
+        <div class="mobile-menu-actions">
+            <div class="user-type-toggle mobile" id="userTypeToggleMobile">
+                <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+            </div>
+            <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile" id="ctaMobileBtn">Empieza ahora</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Customization Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Tu Idea, Tu Estilo: Nuestro Proceso de <span class="text-primary">Personalización</span></h1>
+                    <p>Convertimos tus diseños en productos únicos. Descubre lo fácil que es crear con Jess99.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps Section -->
+        <section class="values-section" style="background: white;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Personalizar con Jess99 es <span class="text-primary">Fácil</span></h2>
+                    <p>Sigue estos 4 sencillos pasos para dar vida a tu creación.</p>
+                </div>
+                <div class="values-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                    <div class="value-card" style="text-align: left;">
+                        <div class="value-icon">1️⃣</div>
+                        <h4>Elige tu Producto</h4>
+                        <p>Explora nuestro <a href="productos.html">catálogo</a> y selecciona el artículo que deseas personalizar: camisetas, hoodies, mugs y más.</p>
+                    </div>
+                    <div class="value-card" style="text-align: left;">
+                        <div class="value-icon">2️⃣</div>
+                        <h4>Envíanos tu Idea</h4>
+                        <p>Contáctanos por <a href="https://wa.me/573197128435?text=Hola,%20quiero%20personalizar%20un%20producto." target="_blank">WhatsApp</a> y envíanos tu logo, imagen o texto. Si no tienes un diseño, ¡nuestro equipo te ayuda a crearlo!</p>
+                    </div>
+                    <div class="value-card" style="text-align: left;">
+                        <div class="value-icon">3️⃣</div>
+                        <h4>Aprueba el Diseño</h4>
+                        <p>Te enviaremos una muestra digital (mockup) para que veas cómo quedará tu producto. Podrás solicitar ajustes hasta que estés 100% satisfecho.</p>
+                    </div>
+                    <div class="value-card" style="text-align: left;">
+                        <div class="value-icon">4️⃣</div>
+                        <h4>Recibe tu Pedido</h4>
+                        <p>Una vez aprobado el diseño, producimos tu pedido con la máxima calidad y te lo enviamos a cualquier parte de Colombia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Tips Section -->
+        <section class="business" style="background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);">
+            <div class="container">
+                <div class="business-grid reverse">
+                    <div class="business-image">
+                        <div class="business-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600132806378-624f4a822503?w=800" alt="Diseñador trabajando en una tableta">
+                        </div>
+                    </div>
+                    <div class="business-content">
+                        <div class="business-badge">
+                            <span>Consejos Pro</span>
+                        </div>
+                        <h2>Consejos para un Diseño <span class="text-primary">Increíble</span></h2>
+                        <p class="business-text">
+                            Sigue estas recomendaciones para asegurar que el resultado final sea espectacular.
+                        </p>
+                        <div class="business-benefits">
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span><strong>Alta Resolución:</strong> Envía imágenes de la mejor calidad posible (idealmente +1500px).</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span><strong>Formatos Ideales:</strong> Preferimos archivos PNG (sin fondo), AI, EPS o PDF.</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span><strong>Contraste de Color:</strong> Asegúrate de que los colores de tu diseño contrasten bien con el color del producto.</span>
+                            </div>
+                             <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span><strong>Sin Ideas:</strong> ¿No tienes un diseño? ¡No te preocupes! Cuéntanos tu idea y nosotros la creamos por ti.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Preguntas <span class="text-primary">Frecuentes</span></h2>
+                </div>
+                <div class="values-grid" style="grid-template-columns: 1fr;">
+                    <div class="value-card" style="text-align: left;">
+                        <h4>¿Hay una cantidad mínima para pedir?</h4>
+                        <p>No, ¡puedes personalizar desde una sola unidad! Para pedidos al por mayor, ofrecemos precios especiales. <a href="empresas.html">Contáctanos</a> para una cotización.</p>
+                    </div>
+                    <div class="value-card" style="text-align: left;">
+                        <h4>¿Qué técnicas de estampado utilizan?</h4>
+                        <p>Utilizamos las mejores técnicas del mercado, como DTF (Direct to Film) y vinilo textil, para garantizar colores vibrantes y una durabilidad excelente en cada prenda.</p>
+                    </div>
+                    <div class="value-card" style="text-align: left;">
+                        <h4>¿Cuánto tiempo tarda mi pedido?</h4>
+                        <p>El tiempo de producción suele ser de 2 a 4 días hábiles después de aprobar el diseño. El tiempo de envío depende de tu ubicación. Consulta nuestra <a href="envios.html">página de envíos</a> para más detalles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container text-center">
+                <h2>¿Listo para empezar a <span class="text-primary">crear</span>?</h2>
+                <p>Nuestro equipo está listo para ayudarte a materializar tu visión. ¡Hablemos!</p>
+                <a href="https://wa.me/573197128435?text=Hola%20Jess99,%20quiero%20empezar%20a%20personalizar%20un%20producto." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" role="button">
+                    Contactar por WhatsApp
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                        </div>
+                        <p class="footer-description">Creamos productos personalizados de alta calidad para individuos y empresas. Tu estilo, nuestra pasión.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="productos.html">Ver todo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="https://wa.me/573197128435?text=Hola%20vengo%20del%20centro%20de%20ayuda" target="_blank" rel="noopener noreferrer">Centro de ayuda</a></li>
+                            <li><a href="envios.html">Envíos</a></li>
+                            <li><a href="terminos.html">Términos</a></li>
+                            <li><a href="privacidad.html">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2025 Jess99. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Envíos - Jess99</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html#inicio">Inicio</a>
+                    <a href="productos.html">Productos</a> 
+                    <a href="index.html#personalizacion">Personalización</a>
+                    <a href="empresas.html">Empresas</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+
+                <!-- User Type & CTA -->
+                <div class="header-actions">
+                    <div class="user-type-toggle" id="userTypeToggleDesktop">
+                        <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                        <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+                    </div>
+                    <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ctaHeaderBtn">Empieza ahora</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav>
+            <a href="index.html#inicio" class="mobile-menu-item">Inicio</a>
+            <a href="productos.html" class="mobile-menu-item">Productos</a>
+            <a href="index.html#personalizacion" class="mobile-menu-item">Personalización</a>
+            <a href="empresas.html" class="mobile-menu-item">Empresas</a>
+            <a href="contacto.html" class="mobile-menu-item">Contacto</a>
+        </nav>
+        <div class="mobile-menu-actions">
+            <div class="user-type-toggle mobile" id="userTypeToggleMobile">
+                <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+            </div>
+            <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile" id="ctaMobileBtn">Empieza ahora</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Shipping Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <div class="section-header">
+                    <h1>Información de <span class="text-primary">Envíos</span></h1>
+                    <p>Entregamos tus productos personalizados en toda Colombia. Conoce nuestras opciones y tiempos de entrega.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shipping Options Section -->
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mission-vision-grid">
+                    <!-- Bogotá Shipping -->
+                    <div class="mission-card">
+                        <h3><span class="value-icon" style="font-size: 2rem; margin-right: 0.5rem;"></span>Envíos en Bogotá</h3>
+                        <p><strong>Tiempo de entrega:</strong> 1 a 2 días hábiles.</p>
+                        <p><strong>Costo:</strong> Desde $8.000 COP. El valor puede variar según el volumen y peso del pedido.</p>
+                        <p>Recibe tus productos directamente en la puerta de tu casa u oficina con nuestro servicio de mensajería local.</p>
+                    </div>
+                    <!-- National Shipping -->
+                    <div class="vision-card">
+                        <h3><span class="value-icon" style="font-size: 2rem; margin-right: 0.5rem;"></span>Envíos Nacionales</h3>
+                        <p><strong>Tiempo de entrega:</strong> 2 a 5 días hábiles.</p>
+                        <p><strong>Costo:</strong> El costo final depende de la ciudad de destino, el peso y el volumen del paquete.</p>
+                        <p>Trabajamos con las mejores transportadoras del país para asegurar que tu pedido llegue en perfectas condiciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Preguntas <span class="text-primary">Frecuentes</span></h2>
+                </div>
+                <div class="values-grid" style="grid-template-columns: 1fr;">
+                    <div class="value-card" style="text-align: left;">
+                        <h4>¿Cómo se calcula el costo de envío para pedidos grandes?</h4>
+                        <p>Para pedidos al por mayor o de gran volumen, el costo de envío se cotiza de forma personalizada. Nuestro equipo te contactará con el valor exacto una vez confirmes tu orden, buscando siempre la opción más económica y segura para ti.</p>
+                    </div>
+                    <div class="value-card" style="text-align: left;">
+                        <h4>¿Puedo rastrear mi pedido?</h4>
+                        <p>¡Sí! Una vez tu pedido sea despachado, te enviaremos un correo electrónico o un mensaje de WhatsApp con el número de guía y el enlace de la transportadora para que puedas seguir tu envío en tiempo real.</p>
+                    </div>
+                    <div class="value-card" style="text-align: left;">
+                        <h4>¿Qué pasa si mi pedido no llega en el tiempo estimado?</h4>
+                        <p>Aunque nos esforzamos por cumplir los plazos, pueden ocurrir retrasos por parte de la transportadora. Si tu pedido tarda más de lo esperado, por favor contáctanos a través de nuestro <a href="https://wa.me/573197128435?text=Hola,%20tengo%20una%20pregunta%20sobre%20el%20envío%20de%20mi%20pedido." target="_blank">centro de ayuda</a> y te ayudaremos a gestionarlo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container text-center">
+                <h2>¿Listo para crear algo <span class="text-primary">increíble</span>?</h2>
+                <p>Explora nuestro catálogo y personaliza tus productos hoy mismo. Nosotros nos encargamos de que lleguen a ti.</p>
+                <a href="productos.html" class="btn btn-primary btn-lg" role="button">
+                    Ver Productos
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                        </div>
+                        <p class="footer-description">Creamos productos personalizados de alta calidad para individuos y empresas. Tu estilo, nuestra pasión.</p>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="productos.html">Ver todo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="index.html#empresas">Soluciones Empresariales</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="https://wa.me/573197128435?text=Hola%20vengo%20del%20centro%20de%20ayuda,%20tengo%20este%20inconveniente" target="_blank" rel="noopener noreferrer">Centro de ayuda</a></li>
+                            <li><a href="envios.html">Envíos</a></li>
+                            <li><a href="terminos.html">Términos</a></li>
+                            <li><a href="privacidad.html">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2025 Jess99. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

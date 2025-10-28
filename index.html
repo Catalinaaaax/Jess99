@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jess99 - Productos Personalizados</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                        <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#inicio">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="personalizacion.html">Personalización</a>
+                    <a href="empresas.html">Empresas</a> 
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+
+                <!-- User Type & CTA -->
+                <div class="header-actions">
+                    <div class="user-type-toggle" id="userTypeToggleDesktop">
+                        <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                        <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+                    </div>
+                    <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="ctaHeaderBtn">Empieza ahora</a>
+                </div>
+                
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav>
+            <a href="#inicio" class="mobile-menu-item">Inicio</a>
+            <a href="productos.html" class="mobile-menu-item">Productos</a>
+            <a href="personalizacion.html" class="mobile-menu-item">Personalización</a>
+            <a href="empresas.html" class="mobile-menu-item">Empresas</a> 
+            <a href="contacto.html" class="mobile-menu-item">Contacto</a>
+        </nav>
+        <div class="mobile-menu-actions">
+            <div class="user-type-toggle mobile" id="userTypeToggleMobile">
+                <button class="user-type-btn active" data-user-type="persona">Persona</button>
+                <button class="user-type-btn" data-user-type="empresa">Empresa</button>
+            </div>
+            <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile" id="ctaMobileBtn">Empieza ahora</a>
+        </div>
+    </div>
+
+
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="inicio">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Content -->
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="sparkle"></span>
+                            <span>Personalización profesional</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Crea tu estilo con <span class="text-primary">Jess99</span>
+                        </h1>
+                        
+                        <p class="hero-subtitle">
+                            Personaliza camisetas, hoodies, gorras, mugs y más. Para ti o para tu empresa.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="https://wa.me/573197128435?text=Hola%20estoy%20interesado%20en%20personalizar%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" role="button">
+                                <span class="sparkle"></span>
+                                Personalizar ahora
+                            </a>
+                            <a href="productos.html" class="btn btn-outline btn-lg" role="button">
+                                Ver catálogo
+                            </a>
+
+                            
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <div class="stat-number">+5,000</div>
+                                <p class="stat-label">Clientes felices</p>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">+50,000</div>
+                                <p class="stat-label">Productos creados</p>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">100%</div>
+                                <p class="stat-label">Calidad garantizada</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="hero-image">
+                        <div class="hero-image-wrapper">
+                            <img src="IMG/Hoodies/Hoodies 2.png" 
+                                 alt="Personas usando camisetas personalizadas">
+                        </div>
+                        
+                        <!-- Floating Card -->
+                        <div class="hero-floating-card">
+                            <div class="floating-card-icon">✨</div>
+                            <div>
+                                <p class="floating-card-label">Envío</p>
+                                <p class="floating-card-text">A toda Colombia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="productos">
+            <div class="container">
+                <!-- Header -->
+                <div class="section-header">
+                    <h2>Productos <span class="text-primary">Destacados</span></h2>
+                    <p>Descubre nuestra selección de productos personalizables de alta calidad</p>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <span class="product-badge">⭐ Popular</span>
+                            <img src="IMG/Camisetas/Camisetas general.png" 
+                                 alt="Camisetas">
+                        </div>
+                        <div class="product-content">
+                            <h3>Camisetas</h3>
+                            <p>100% diseños personalizados</p>
+                            <div class="product-footer">
+                                <span class="product-price">Desde $35.000</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm">
+                                Personalizar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="IMG/Hoodies/Hoodies.jpeg" 
+                                 alt="Hoodies">
+                        </div>
+                        <div class="product-content">
+                            <h3>Hoodies</h3>
+                            <p>Suaves, cómodos y personalizables</p>
+                            <div class="product-footer">
+                                <span class="product-price">Desde $60.000</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm">
+                                Personalizar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="IMG/Mugs/Gorras.png" 
+                                 alt="Gorras">
+                        </div>
+                        <div class="product-content">
+                            <h3>Gorras</h3>
+                            <p>Estilo urbano con tu diseño</p>
+                            <div class="product-footer">
+                                <span class="product-price">Desde $12.000</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm">
+                                Personalizar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <img src="IMG/Mugs/Mugs - copia.jpeg" 
+                                 alt="Mugs">
+                        </div>
+                        <div class="product-content">
+                            <h3>Mugs</h3>
+                            <p>Tazas personalizadas de cerámica</p>
+                            <div class="product-footer">
+                                <span class="product-price">Desde $12.000</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm">
+                                Personalizar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-card">
+                        <div class="product-image-wrapper">
+                            <span class="product-badge">⭐ Popular</span>
+                            <img src="IMG/Mugs/Termos.png" 
+                                 alt="Termos">
+                        </div>
+                        <div class="product-content">
+                            <h3>Termos</h3>
+                            <p>Mantén tu bebida a la temperatura perfecta</p>
+                            <div class="product-footer">
+                                <span class="product-price">Desde $12.000</span>
+                            </div>
+                            <button class="btn btn-primary btn-sm">
+                                Personalizar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="section-cta">
+                    <a href="productos.html" class="btn btn-outline btn-lg" role="button">Ver todos los productos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Section -->
+        <section class="business" id="empresas">
+            <div class="container">
+                <div class="business-grid">
+                    <!-- Image -->
+                    <div class="business-image">
+                        <div class="business-image-wrapper">
+                            <img src="IMG/Camisetas/Camisetas dama y cabellero.png" 
+                                 alt="Equipo corporativo">
+                        </div>
+                        
+                    </div>
+
+                    <!-- Content -->
+                    <div class="business-content">
+                        <div class="business-badge">
+                            
+                            <span>Soluciones Empresariales</span>
+                        </div>
+
+                        <h2>Soluciones de personalización para tu <span class="text-primary">empresa</span></h2>
+
+                        <p class="business-text">
+                            Fortalece la identidad de tu marca con productos personalizados de alta calidad. 
+                            Ideal para uniformes corporativos, eventos y regalos empresariales.
+                        </p>
+
+                        <!-- Benefits -->
+                        <div class="business-benefits">
+                            
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span>Diseño personalizado incluido</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span>Entrega rápida garantizada</span>
+                            </div>
+                            <div class="benefit-item">
+                                <span class="benefit-icon">✅</span>
+                                <span>Atención prioritaria 24/7</span>
+                            </div>
+                        </div>
+
+                        <!-- Stats Cards -->
+                        <div class="business-stats">
+                            <div class="stat-card">
+                                <div class="stat-card-icon">⚡</div>
+                                <p class="stat-card-number">Calidad garantizada</p>
+                                <p class="stat-card-label">express</p>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-card-icon">👥</div>
+                                <p class="stat-card-number">Pedidos flexibles</p>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="business-buttons">
+                            <a href="https://wa.me/573197128435?text=Hola%20quiero%20realizar%20una%20cotizaci%C3%B3n%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" role="button">Solicita una cotización</a>
+                            <a href="productos.html" class="btn btn-outline btn-lg" role="button">Ver catálogo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <!-- Header -->
+                <div class="section-header">
+                    <h2>Lo que dicen nuestros <span class="text-primary">clientes</span></h2>
+                    <p>Miles de personas y empresas confían en nosotros para crear productos únicos</p>
+                </div>
+
+                <!-- Carousel -->
+                <div class="testimonials-carousel-wrapper">
+                    <button class="carousel-btn prev" id="prevBtn">‹</button>
+                    <div class="testimonials-carousel" id="testimonialsCarousel">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">❝</div>
+                            <div class="rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                            </div>
+                            <p class="testimonial-text">
+                                "¡Increíble servicio! Las camisetas para mi marca quedaron perfectas. La calidad supera mis expectativas y el proceso fue muy sencillo."
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1703759354715-17fcbeea4b66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGN1c3RvbWVyJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYxNDA5ODIwfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="María González">
+                                <div>
+                                    <p class="author-name">María González</p>
+                                    <p class="author-role">Emprendedora</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">❝</div>
+                            <div class="rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                            </div>
+                            <p class="testimonial-text">
+                                "Trabajamos con Jess99 para uniformes corporativos. Excelente atención y los productos llegaron antes de lo esperado. ¡100% recomendados!"
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop" alt="Carlos Ruiz">
+                                <div>
+                                    <p class="author-name">Carlos Ruiz</p>
+                                    <p class="author-role">Director de Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">❝</div>
+                            <div class="rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                            </div>
+                            <p class="testimonial-text">
+                                "Pedimos 200 camisetas personalizadas para nuestro evento. La calidad es excepcional y el diseño quedó tal como lo imaginamos."
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop" alt="Ana Martínez">
+                                <div>
+                                    <p class="author-name">Ana Martínez</p>
+                                    <p class="author-role">Organizadora de Eventos</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">❝</div>
+                            <div class="rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                            </div>
+                            <p class="testimonial-text">
+                                "Los mugs personalizados son un éxito en mi negocio. Mis clientes los aman y muchos los compran como recuerdo. Gracias Jess99!"
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Luis Torres">
+                                <div>
+                                    <p class="author-name">Luis Torres</p>
+                                    <p class="author-role">Dueño de Café</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 5 -->
+                        <div class="testimonial-card">
+                            <div class="quote-icon">❝</div>
+                            <div class="rating">
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                                <span class="star">⭐</span>
+                            </div>
+                            <p class="testimonial-text">
+                                "Necesitábamos hoodies para todo el equipo y Jess99 nos brindó la mejor solución. Diseño moderno, calidad premium y entrega puntual."
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" alt="Sandra López">
+                                <div>
+                                    <p class="author-name">Sandra López</p>
+                                    <p class="author-role">CEO Startup Tech</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" id="nextBtn">›</button>
+                </div>
+
+                <!-- Trust Indicators -->
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <p class="trust-number">5.0</p>
+                        <p class="trust-label">Rating promedio</p>
+                    </div>
+                    <div class="trust-item">
+                        <p class="trust-number">5,000+</p>
+                        <p class="trust-label">Clientes satisfechos</p>
+                    </div>
+                    <div class="trust-item">
+                        <p class="trust-number">50K+</p>
+                        <p class="trust-label">Productos entregados</p>
+                    </div>
+                    <div class="trust-item">
+                        <p class="trust-number">99%</p>
+                        <p class="trust-label">Recomendación</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contacto">
+        <!-- Newsletter Section -->
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="newsletter-grid">
+                    <div class="newsletter-content">
+                        <h3>Mantente actualizado</h3>
+                        <p>Recibe ofertas exclusivas y novedades directamente en tu correo</p>
+                    </div>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="tu@email.com" class="newsletter-input">
+                        <button class="btn btn-primary">Suscribirse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Brand -->
+                    <div class="footer-brand">
+                        <div class="logo">
+                            <span class="logo-primary">Jess</span><span class="logo-secondary">99</span>
+                        </div>
+                        <p class="footer-description">
+                            Creamos productos personalizados de alta calidad para individuos y empresas. 
+                            Tu estilo, nuestra pasión.
+                        </p>
+                        
+                        <!-- Contact Info -->
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <span class="contact-icon">📧</span>
+                                <span>contactojess99@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📞</span>
+                                <span>+57 319 7128435</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-icon">📍</span>
+                                <span>Bogotá, Colombia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Links -->
+                    <div class="footer-links">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="productos.html">Camisetas</a></li>
+                            <li><a href="productos.html">Hoodies</a></li>
+                            <li><a href="productos.html">Gorras</a></li>
+                            <li><a href="productos.html">Mugs</a></li>
+                            <li><a href="productos.html">Ver todo</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Company Links -->
+                    <div class="footer-links">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support Links -->
+                    <div class="footer-links">
+                        <h4>Soporte</h4>
+                        <ul>
+                            <li><a href="https://wa.me/573197128435?text=Hola%20vengo%20del%20centro%20de%20ayuda,%20tengo%20este%20inconveniente" target="_blank" rel="noopener noreferrer">Centro de ayuda</a></li>
+                            <li><a href="envios.html">Envíos</a></li>
+                            <li><a href="terminos.html">Términos</a></li>
+                            <li><a href="privacidad.html">Privacidad</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>© 2025 Jess99. Todos los derechos reservados.</p>
+                    
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
