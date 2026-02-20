@@ -340,91 +340,48 @@ const debouncedResize = debounce(() => {
 window.addEventListener('resize', debouncedResize);
 
 // ===================================
-// JESS99 - Efectos Navideños
+// JESS99 - Efectos Día de la Mujer
 // ===================================
 
 // ===================================
-// Crear Banner Navideño (antes del header)
+// Crear Banner del Día de la Mujer
 // ===================================
-function createChristmasBanner() {
+function createWomensDayBanner() {
     const header = document.querySelector('header');
     if (!header) return;
     
     const banner = document.createElement('section');
-    banner.className = 'christmas-banner';
+    banner.className = 'womens-day-banner';
     banner.innerHTML = `
         <div class="container">
-            <div class="christmas-banner-content">
-                <div class="christmas-banner-icon left">
-                    <img src="IMG/Navidad/Arbol.png" alt="Árbol de Navidad">
+            <div class="womens-day-banner-content">
+                <div class="womens-day-banner-icon left">
+                    <img src="IMG/Amor y amistad/Flor morada.png" alt="Flores Moradas">
                 </div>
-                <div class="christmas-banner-text">
-                    <h2 class="christmas-banner-title">¡Llegó la Temporada Navideña!</h2>
-                    <p class="christmas-banner-subtitle">Descuentos especiales en productos personalizados • Ideal para regalos corporativos</p>
+                <div class="womens-day-banner-text">
+                    <h2 class="womens-day-banner-title">Conmemoramos el Día de la Mujer</h2>
+                    <p class="womens-day-banner-subtitle">Celebrando la fuerza, la inspiración y la belleza de cada mujer.</p>
                 </div>
-                <div class="christmas-banner-icon right">
-                    <img src="IMG/Navidad/Regalos.png" alt="Regalos de Navidad">
+                <div class="womens-day-banner-icon right">
+                   <img src="IMG/Amor y amistad/Flor morada.png" alt="Flores Moradas">
                 </div>
             </div>
         </div>
     `;
     
-    // Insertar el banner DESPUÉS del header, asegurando que el header exista
     document.querySelector('header')?.insertAdjacentElement('afterend', banner);
-    
-    // Agregar evento al botón CTA
-    const ctaButton = banner.querySelector('.christmas-banner-cta');
 }
 
 // ===================================
-// Crear Bolas de Navidad en el Footer
+// Efecto de Caída de Pétalos/Flores
 // ===================================
-function createChristmasOrnaments() {
-    const footer = document.querySelector('.footer');
-    if (!footer) return;
-    
-    const ornamentsContainer = document.createElement('div');
-    ornamentsContainer.className = 'christmas-ornaments';
-    
-    const ornamentColors = ['red', 'green', 'gold', 'blue'];
-    const ornamentCount = 12; // Fixed count for more consistent look
-    
-    for (let i = 0; i < ornamentCount; i++) {
-        const ornament = document.createElement('div');
-        ornament.className = `ornament ornament-${ornamentColors[i % ornamentColors.length]}`;
-        
-        // Posicionar las bolas aleatoriamente
-        const leftPosition = (i * (100 / ornamentCount)) + (Math.random() * 5);
-        ornament.style.left = `${leftPosition}%`;
-        ornament.style.top = `${Math.random() * 30}px`;
-        
-        // Añadir variación en el tamaño
-        const size = 30 + Math.random() * 20;
-        ornament.style.width = `${size}px`;
-        ornament.style.height = `${size}px`;
-        
-        // Añadir variación en la animación
-        ornament.style.animationDelay = `${Math.random() * 2}s`;
-        ornament.style.animationDuration = `${3 + Math.random() * 2}s`;
-        
-        ornamentsContainer.appendChild(ornament);
-    }
-    
-    footer.insertBefore(ornamentsContainer, footer.firstChild);
-}
-
-// ===================================
-// Efecto de Nieve Cayendo
-// ===================================
-function createSnowfall() {
-    // Crear canvas para la nieve
+function createFlowerFall() {
     const canvas = document.createElement('canvas');
-    canvas.id = 'snow-canvas'; // Asegurarse de que el ID sea correcto
+    canvas.id = 'flower-canvas';
     document.body.appendChild(canvas);
     
     const ctx = canvas.getContext('2d');
     
-    // Configurar tamaño del canvas
     function resizeCanvas() {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -432,15 +389,11 @@ function createSnowfall() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     
-    // Crear copos de nieve
-    const snowflakes = [];
-    const maxSnowflakes = 50;
-    // Paleta de colores navideños para los copos
-    const snowColors = ['#FFFFFF', '#FFD700', '#C41E3A', '#00873E']; // Colores para la nieve
-    const ornamentColors = ['#FFD700', '#C41E3A']; // Dorado y Rojo para las bolas
+    const particles = [];
+    const maxParticles = 40;
+    const particleColors = ['#D8BFD8', '#E6E6FA', '#C3B1E1', '#BDB5D5']; // Tonos de morado y lavanda
 
-    
-    class Snowflake {
+    class Particle {
         constructor() {
             this.reset();
         }
@@ -448,75 +401,56 @@ function createSnowfall() {
         reset() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * -canvas.height;
-            this.wind = Math.random() * 0.5 - 0.25;
+            this.wind = Math.random() * 0.8 - 0.4; // More horizontal movement
             this.opacity = Math.random() * 0.5 + 0.3;
-
-            // Decidir si es un copo de nieve o una bola decorativa
-            if (Math.random() > 0.95) { // 5% de probabilidad de ser una bola
-                this.type = 'ornament';
-                this.radius = Math.random() * 15 + 20; // Más grandes: 20px a 35px
-                this.speed = Math.random() * 1 + 0.8; // Un poco más rápidas
-                this.color = ornamentColors[Math.floor(Math.random() * ornamentColors.length)];
-                this.blur = Math.random() * 2 + 2; // Desenfoque para dar profundidad
-            } else {
-                this.type = 'snow';
-                this.radius = Math.random() * 3 + 1; // Pequeños
-                this.speed = Math.random() * 1 + 0.5;
-                this.color = snowColors[Math.floor(Math.random() * snowColors.length)];
-                this.blur = 0; // Sin desenfoque
-            }
+            this.radius = Math.random() * 4 + 2; // Petal size
+            this.speed = Math.random() * 0.8 + 0.4; // Slower fall
+            this.color = particleColors[Math.floor(Math.random() * particleColors.length)];
+            this.rotation = Math.random() * 360;
+            this.rotationSpeed = Math.random() * 0.5 - 0.25;
         }
         
         update() {
             this.y += this.speed;
             this.x += this.wind;
+            this.rotation += this.rotationSpeed;
             
-            // Reiniciar si sale de la pantalla
             if (this.y > canvas.height) {
                 this.reset();
                 this.y = 0;
             }
             
             if (this.x > canvas.width || this.x < 0) {
-                this.x = Math.random() * canvas.width;
+                this.wind *= -1; // Bounce off sides
             }
         }
         
         draw() {
             ctx.beginPath();
-            ctx.filter = `blur(${this.blur}px)`; // Aplicar desenfoque
-
-            if (this.type === 'ornament') {
-                // Crear un gradiente para dar efecto de esfera
-                const gradient = ctx.createRadialGradient(this.x - this.radius * 0.3, this.y - this.radius * 0.3, this.radius * 0.1, this.x, this.y, this.radius);
-                const lighterColor = hexToRgba('#FFFFFF', 0.7); // Un brillo blanco
-                const mainColor = hexToRgba(this.color, this.opacity);
-                gradient.addColorStop(0, lighterColor);
-                gradient.addColorStop(1, mainColor);
-                ctx.fillStyle = gradient;
-            } else {
-                ctx.fillStyle = hexToRgba(this.color, this.opacity);
-            }
-
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = hexToRgba(this.color, this.opacity);
+            
+            // Draw an ellipse to simulate a petal
+            ctx.save();
+            ctx.translate(this.x, this.y);
+            ctx.rotate(this.rotation * Math.PI / 180);
+            ctx.ellipse(0, 0, this.radius, this.radius / 2, 0, 0, Math.PI * 2);
             ctx.fill();
+            ctx.restore();
+            
             ctx.closePath();
-            ctx.filter = 'none'; // Resetear el filtro para no afectar otros elementos
         }
     }
     
-    // Inicializar copos de nieve
-    for (let i = 0; i < maxSnowflakes; i++) {
-        snowflakes.push(new Snowflake());
+    for (let i = 0; i < maxParticles; i++) {
+        particles.push(new Particle());
     }
     
-    // Animar
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         
-        snowflakes.forEach(snowflake => {
-            snowflake.update();
-            snowflake.draw();
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
         });
         
         requestAnimationFrame(animate);
@@ -525,15 +459,13 @@ function createSnowfall() {
     animate();
 }
 
-// Helper para convertir HEX a RGBA (usado en la clase Snowflake)
+// Helper para convertir HEX a RGBA
 function hexToRgba(hex, opacity) {
     let r = 0, g = 0, b = 0;
-    // 3 digits
     if (hex.length == 4) {
         r = "0x" + hex[1] + hex[1];
         g = "0x" + hex[2] + hex[2];
         b = "0x" + hex[3] + hex[3];
-    // 6 digits
     } else if (hex.length == 7) {
         r = "0x" + hex[1] + hex[2];
         g = "0x" + hex[3] + hex[4];
@@ -542,34 +474,22 @@ function hexToRgba(hex, opacity) {
     return `rgba(${+r},${+g},${+b},${opacity})`;
 }
 
-// Usar window.onload para asegurar que todo esté cargado, incluyendo el salto del ancla del navegador.
 window.onload = function() {
-    // Inicializar todos los efectos navideños aquí
     try {
-        createSnowfall();
-        createChristmasBanner();
-        createChristmasOrnaments();
+        createFlowerFall();
+        createWomensDayBanner();
 
-        // Mensaje de bienvenida en la consola
-        console.log('%c🎄 ¡Bienvenido a Jess99! 🎨', 'color: #007BFF; font-size: 20px; font-weight: bold;');
+        console.log('%c💜 ¡Feliz Día de la Mujer de parte de Jess99! 🎨', 'color: #8A2BE2; font-size: 20px; font-weight: bold;');
         console.log('%cSitio web desarrollado con HTML, CSS y JavaScript vanilla', 'color: #6b7280; font-size: 12px;');
-        console.log('%c❄️ Temporada navideña activada', 'color: #00873E; font-size: 14px; font-weight: bold;');
+        console.log('%c🌸 Tema del Día de la Mujer activado', 'color: #C3B1E1; font-size: 14px; font-weight: bold;');
 
     } catch (error) {
-        console.error("Error al inicializar los efectos navideños:", error);
+        console.error("Error al inicializar los efectos del Día de la Mujer:", error);
     }
 };
 
-// Mantener el inicializador del tipo de usuario en DOMContentLoaded porque es una configuración inicial que no depende de otros elementos.
-document.addEventListener('DOMContentLoaded', () => {
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const isEmpresasPage = currentPath === 'empresas.html';
-    const userType = isEmpresasPage ? 'empresa' : 'persona';
-    handleUserTypeChange(userType);
-});
-
 // ===================================
-// 🎄 EFECTO DE CURSOR MÁGICO NAVIDEÑO
+// 🌸 EFECTO DE CURSOR MÁGICO
 // ===================================
 
 class MagicCursor {
@@ -583,7 +503,6 @@ class MagicCursor {
     }
 
     init() {
-        // No ejecutar en dispositivos táctiles
         if ('ontouchstart' in window) {
             return;
         }
@@ -609,7 +528,7 @@ class MagicCursor {
             this.cursorPos.x = e.clientX;
             this.cursorPos.y = e.clientY;
             
-            if (Math.random() > 0.85) { // Reducir la frecuencia de partículas
+            if (Math.random() > 0.85) {
                 this.createParticle(e.clientX, e.clientY);
             }
         });
@@ -649,7 +568,7 @@ class MagicCursor {
     }
 
     createParticle(x, y) {
-        const particles = ['❄️', '✨', '⭐', '🌟'];
+        const particles = ['🌸', '✨', '💜', '♀️'];
         const particle = document.createElement('div');
         particle.className = 'cursor-particle';
         particle.textContent = particles[Math.floor(Math.random() * particles.length)];
@@ -693,7 +612,7 @@ class MagicCursor {
 
     createClickParticles(x, y) {
         const particleCount = 10;
-        const colors = ['#C41E3A', '#165B33', '#FFD700', '#FFFFFF']; // Rojo, Verde, Dorado, Blanco
+        const colors = ['#8A2BE2', '#D8BFD8', '#FFC0CB', '#FFFFFF']; // Morado, Lavanda, Rosa, Blanco
 
         for (let i = 0; i < particleCount; i++) {
             const particle = document.createElement('div');
@@ -743,7 +662,7 @@ class MagicCursor {
     }
 }
 
-// Inicializar el cursor mágico solo una vez.
+// Inicializar el cursor mágico
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => new MagicCursor());
 } else {

@@ -24,10 +24,10 @@
     --radius-lg: 1.5rem;
     --radius-xl: 2rem;
 
-    /* Colores navideños para detalles */
-    --christmas-red: #C41E3A;
-    --christmas-green: #165B33;
-    --christmas-gold: #FFD700;
+    /* Colores para el Día de la Mujer */
+    --womens-day-purple: #8A2BE2; /* Un morado vibrante */
+    --womens-day-light-purple: #C3B1E1; /* Lavanda suave */
+    --womens-day-pink: #FFC0CB; /* Rosa claro */
 }
 
 html {
@@ -54,7 +54,7 @@ img {
 }
 
 /* Canvas para nieve */
-#snow-canvas {
+#flower-canvas {
     position: fixed;
     top: 0;
     left: 0;
@@ -67,106 +67,99 @@ img {
 /* ===================================
    BANNER NAVIDEÑO
    =================================== */
-.christmas-banner {
-    background: linear-gradient(135deg, #C41E3A 0%, #8B0000 100%);
+.womens-day-banner {
+    background: linear-gradient(135deg, #6a0dad 0%, #8A2BE2 100%); /* Gradiente morado */
     color: white;
     padding: 1.5rem 0;
     position: relative;
     overflow: hidden;
-    border-bottom: 3px solid #FFD700;
+    border-bottom: 3px solid var(--womens-day-light-purple);
     animation: fadeInDown 0.8s ease-out;
 }
 
-.christmas-banner::before {
-    content: '❄️';
+.womens-day-banner::before {
+    content: '♀️';
     position: absolute;
     font-size: 8rem;
     opacity: 0.1;
     top: -1rem;
     left: 5%;
-    animation: rotate 20s linear infinite;
+    animation: float 5s ease-in-out infinite;
 }
 
-.christmas-banner::after {
-    content: '🎄';
+.womens-day-banner::after {
+    content: '🌸';
     position: absolute;
     font-size: 8rem;
     opacity: 0.1;
     top: -1rem;
     right: 5%;
-    animation: float 3s ease-in-out infinite;
+    animation: rotate 25s linear infinite;
 }
 
-.christmas-banner-content {
+.womens-day-banner-content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Separa los elementos a los extremos */
+    justify-content: space-between;
     gap: 1.5rem;
     position: relative;
     z-index: 1;
 }
 
-.christmas-banner-icon {
-    flex-shrink: 0; /* Evita que la imagen se encoja */
-    animation: float 3s ease-in-out infinite; /* Animación de flotar para ambas imágenes */
+.womens-day-banner-icon {
+    flex-shrink: 0;
+    animation: float 3s ease-in-out infinite;
 }
 
-.christmas-banner-icon img {
-    height: 100px; /* Aumentamos el tamaño para mayor impacto visual */
+.womens-day-banner-icon img {
+    height: 80px;
     width: auto;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); /* Sombra para resaltar */
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
-/* Ocultar la imagen de regalos en pantallas pequeñas para no saturar */
-.christmas-banner-icon.right {
+.womens-day-banner-icon.right {
     display: none;
 }
 
-.christmas-banner-text {
-    flex-grow: 1; /* Permite que el contenedor de texto ocupe el espacio disponible */
-    text-align: center; /* Centra el texto dentro de su contenedor */
+.womens-day-banner-text {
+    flex-grow: 1;
+    text-align: center;
 }
 
-.christmas-banner-title {
+.womens-day-banner-title {
     font-size: 1.75rem;
     font-weight: 700;
     margin: 0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.christmas-banner-subtitle {
+.womens-day-banner-subtitle {
     font-size: 1rem;
     margin: 0;
     opacity: 0.95;
 }
 
 @media (max-width: 768px) {
-    .christmas-banner-content {
-        flex-direction: column; /* En móvil, el árbol se pone arriba */
+    .womens-day-banner-content {
+        flex-direction: column;
         gap: 1rem;
     }
 
-    .christmas-banner-text {
-        text-align: center; /* El texto se mantiene centrado */
-    }
-
-    .christmas-banner-title {
+    .womens-day-banner-title {
         font-size: 1.25rem;
     }
 
-    .christmas-banner-subtitle {
+    .womens-day-banner-subtitle {
         font-size: 0.875rem;
     }
 
-    .christmas-banner-icon.left {
-        /* Ajustamos el tamaño del árbol para móviles */
-        height: 75px;
+    .womens-day-banner-icon.left img {
+        height: 60px;
     }
 }
 
 @media (min-width: 769px) {
-    /* Mostrar la imagen de regalos solo en pantallas más grandes */
-    .christmas-banner-icon.right {
+    .womens-day-banner-icon.right {
         display: block;
     }
 }
@@ -1064,67 +1057,6 @@ p {
     overflow: hidden;
 }
 
-/* Contenedor de bolas de navidad */
-.christmas-ornaments {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.ornament {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    box-shadow: 
-        inset -5px -5px 10px rgba(0, 0, 0, 0.3),
-        0 5px 15px rgba(0, 0, 0, 0.4);
-    animation: swing 3s ease-in-out infinite;
-}
-
-.ornament::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 60px;
-    background: #888;
-}
-
-.ornament::after {
-    content: '';
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 8px;
-    height: 8px;
-    background: #FFD700;
-    border-radius: 50%;
-}
-
-.ornament-red {
-    background: radial-gradient(circle at 30% 30%, #FF4444, #C41E3A);
-}
-
-.ornament-green {
-    background: radial-gradient(circle at 30% 30%, #2D7A4F, #165B33);
-}
-
-.ornament-gold {
-    background: radial-gradient(circle at 30% 30%, #FFD700, #DAA520);
-}
-
-.ornament-blue {
-    background: radial-gradient(circle at 30% 30%, #4A90E2, #007BFF);
-}
-
 .footer-newsletter {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
@@ -1924,123 +1856,47 @@ p {
     }
 }
 
+/* =======================================
+   🌸 Fondo Día de la Mujer Sutil
+======================================= */
 
-/* ===== BOTÓN NAVIDEÑO ✨ ===== */
-.btn-navidad {
-    position: relative;
-    padding: 15px 45px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: white;
-    background: linear-gradient(90deg, #11682f, #1c8c3f, #11682f);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    overflow: hidden;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    animation: glow 3s ease-in-out infinite;
-}
-
-@keyframes glow {
-    0%, 100% { box-shadow: 0 0 10px rgba(28, 140, 63, 0.6); }
-    50% { box-shadow: 0 0 20px rgba(28, 140, 63, 1); }
-}
-
-/* ✨ Luz que recorre el botón */
-.btn-navidad::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.4);
-    transform: skewX(-20deg);
-    animation: shine 4s linear infinite;
-}
-
-@keyframes shine {
-    0% { left: -100%; }
-    100% { left: 200%; }
-}
-
-/* ===== COPOS DE NIEVE ===== */
-.snow-container {
-    position: absolute;
+.womens-day-background {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
-    overflow: hidden;
-}
-
-/* Estilo de los copos */
-.snowflake {
-    position: absolute;
-    top: -10px;
-    font-size: 12px;
-    opacity: 0.8;
-    animation: fall linear infinite;
-    color: white;
-}
-
-/* Animación de caída */
-@keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(200px) rotate(360deg); opacity: 0; }
-}
-
-/* =======================================
-   🎄 Fondo Navideño Sutil - Jess99
-======================================= */
-
-.christmas-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Evita interferencias con clics */
-    z-index: -1; /* Se queda detrás de todo */
-    background: radial-gradient(circle at 20% 30%, rgba(0, 100, 0, 0.08) 0%, transparent 60%),
-                radial-gradient(circle at 80% 20%, rgba(200, 0, 0, 0.06) 0%, transparent 60%),
-                radial-gradient(circle at 50% 80%, rgba(0, 80, 150, 0.06) 0%, transparent 60%);
+    z-index: -1;
+    background: radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.08) 0%, transparent 60%),
+                radial-gradient(circle at 80% 20%, rgba(255, 192, 203, 0.07) 0%, transparent 60%),
+                radial-gradient(circle at 50% 80%, rgba(195, 177, 225, 0.08) 0%, transparent 60%);
     animation: backgroundMove 15s infinite alternate ease-in-out;
-    filter: blur(8px); /* Sutil difuminado */
+    filter: blur(8px);
 }
 
 @keyframes backgroundMove {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
 }
 
-/* Aseguramos que el body tenga position: relative para que z-index: -1 funcione correctamente */
 body {
     position: relative;
 }
 
 /* ===================================
-   🎄 EFECTO DE CURSOR MÁGICO NAVIDEÑO
+   🌸 EFECTO DE CURSOR MÁGICO
    =================================== */
 
-/* Ocultar cursor por defecto para dar paso al personalizado */
 body {
     cursor: none;
 }
 
-/* Cursor principal (el punto rápido) */
 .custom-cursor {
     position: fixed;
     width: 10px;
     height: 10px;
-    background-color: var(--christmas-red);
+    background-color: var(--womens-day-purple);
     border-radius: 50%;
     pointer-events: none;
     z-index: 10000;
@@ -2050,15 +1906,14 @@ body {
 
 .custom-cursor.clicking {
     transform: translate(-50%, -50%) scale(2.5);
-    background: rgba(196, 30, 58, 0.3); /* --christmas-red con opacidad */
+    background: rgba(138, 43, 226, 0.3);
 }
 
-/* Cursor seguidor (el círculo más grande y lento) */
 .cursor-follower {
     position: fixed;
     width: 40px;
     height: 40px;
-    border: 2px solid var(--christmas-red);
+    border: 2px solid var(--womens-day-purple);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
@@ -2066,7 +1921,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Partículas que deja el cursor al moverse */
 .cursor-particle {
     position: fixed;
     pointer-events: none;
@@ -2076,10 +1930,9 @@ body {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
 }
 
-/* Onda que se expande al hacer clic */
 .cursor-ripple {
     position: fixed;
-    border: 2px solid var(--christmas-red);
+    border: 2px solid var(--womens-day-purple);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9997;
@@ -2087,12 +1940,11 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Efecto de brillo sutil que sigue al cursor */
 .cursor-glow {
     position: fixed;
     width: 100px;
     height: 100px;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.15) 0%, transparent 70%); /* --christmas-gold con opacidad */
+    background: radial-gradient(circle, rgba(216, 191, 216, 0.15) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9996;
@@ -2101,13 +1953,11 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Efecto de hover en elementos interactivos (manejado por JS, pero definimos la escala) */
 .cursor-follower.hovering {
     transform: translate(-50%, -50%) scale(1.6);
-    background: rgba(22, 91, 51, 0.1); /* --christmas-green con opacidad */
+    background: rgba(216, 191, 216, 0.2);
 }
 
-/* Animaciones (no necesitan cambios) */
 @keyframes particle-fade {
     0% {
         opacity: 1;
